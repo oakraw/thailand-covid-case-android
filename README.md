@@ -7,6 +7,11 @@
 # Screenshot
 ![Image](https://github.com/oakraw/thailand-covid-case-android/blob/master/ss.jpg?raw=true)
 
+
+### Credits
+Api by Sunday Technology</br>
+Designed by @puhn
+
 # License 
 MIT License
 
