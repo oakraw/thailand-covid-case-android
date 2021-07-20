@@ -28,6 +28,10 @@
         <item name="android:fontFamily">@font/mitr_medium</item>
     </style>
 
+    <style name="TextAppearance.App.Caption.Number" parent="TextAppearance.App.Caption">
+        <item name="android:fontFamily">@font/rubik_regular</item>
+    </style>
+
     <style name="TextAppearance.App.Body1" parent="TextAppearance.AppCompat.Body1">
         <item name="android:fontFamily">@font/mitr_regular</item>
         <item name="android:textSize">@dimen/material_text_body1</item>

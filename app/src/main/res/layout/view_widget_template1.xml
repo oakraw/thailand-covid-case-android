@@ -53,6 +53,7 @@
         android:textColor="@color/danger" />
 
     <LinearLayout
+        android:id="@+id/containerSecondaryInfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/textNewCase"
@@ -127,6 +128,41 @@
                 android:textAppearance="@style/TextAppearance.App.Display1.Number"
                 android:textColor="@color/secondary" />
         </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/containerUpdateDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/space_1"
+        android:gravity="center_vertical|end"
+        android:layout_below="@id/containerSecondaryInfo">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="อัพเดตล่าสุด"
+            android:textAppearance="@style/TextAppearance.App.Caption"
+            android:textColor="@color/text_hint"/>
+
+        <TextView
+            android:id="@+id/textUpdateTimestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:layout_marginStart="@dimen/space_1"
+            android:textAppearance="@style/TextAppearance.App.Caption.Number"
+            android:textColor="@color/text_hint"/>
+
+        <ImageView
+            android:id="@+id/buttonRefresh"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:clickable="true"
+            android:layout_marginStart="@dimen/space_1"
+            android:src="@drawable/ic_refresh"/>
 
     </LinearLayout>
 </RelativeLayout>

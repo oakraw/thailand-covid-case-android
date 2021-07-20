@@ -3,10 +3,13 @@ package com.oakraw.thailand_covid.service
 import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProvider
+import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
+import android.util.Log
 import android.view.View
 import android.widget.RemoteViews
+import android.widget.Toast
 import androidx.core.view.isInvisible
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
@@ -28,24 +31,59 @@ import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 import java.util.*
 
+
 class MainAppWidgetProvider : AppWidgetProvider(), KoinComponent {
     private var shouldShowCovid: Boolean = false
     private var remoteConfig: FirebaseRemoteConfig? = null
-    val apiRepository: ApiRepository by inject()
+    private val apiRepository: ApiRepository by inject()
+    private val REFRESH_TAG = "REFRESH_TAG"
+
+    override fun onReceive(context: Context, intent: Intent) {
+        super.onReceive(context, intent)
+        if (intent.action == REFRESH_TAG) {
+            Toast.makeText(context, "Updating...", Toast.LENGTH_SHORT).show();
+//            val views = RemoteViews(
+//                context.packageName,
+//                R.layout.view_widget_template1
+//            )
+//            val componentName = ComponentName(context, MainAppWidgetProvider::class.java)
+//            val appWidgetManager = AppWidgetManager.getInstance(context)
+//            val ids = appWidgetManager.getAppWidgetIds(componentName)
+//            for (id in ids) {
+//                appWidgetManager.updateAppWidget(id, views)
+//            }
+            val updateIntent = Intent(context, MainAppWidgetProvider::class.java)
+            updateIntent.action = AppWidgetManager.ACTION_APPWIDGET_UPDATE
+
+            val ids = AppWidgetManager.getInstance(context)
+                .getAppWidgetIds(
+                    ComponentName(
+                        context,
+                        MainAppWidgetProvider::class.java
+                    )
+                )
+
+            updateIntent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, ids)
+            context.sendBroadcast(updateIntent)
+        }
+    }
 
     override fun onUpdate(
-            context: Context,
-            appWidgetManager: AppWidgetManager,
-            appWidgetIds: IntArray
+        context: Context,
+        appWidgetManager: AppWidgetManager,
+        appWidgetIds: IntArray
     ) {
+        Log.d("MainAppWidgetProvider", "update")
         fetchRemoteConfig()
         GlobalScope.launch(Dispatchers.IO) {
             val response = apiRepository.getTodayCaseInfo()
             when (response) {
                 is NetworkResponse.Success -> {
                     appWidgetIds.forEach { appWidgetId ->
-                        renderWidget(context,
-                                appWidgetManager, appWidgetId, response.body)
+                        renderWidget(
+                            context,
+                            appWidgetManager, appWidgetId, response.body
+                        )
                     }
                 }
             }
@@ -61,28 +99,42 @@ class MainAppWidgetProvider : AppWidgetProvider(), KoinComponent {
         shouldShowCovid = remoteConfig?.getBoolean("show_covid") ?: false
     }
 
-    private fun renderWidget(context: Context, appWidgetManager: AppWidgetManager, appWidgetId: Int, caseInfo: CaseInfo) {
+    private fun renderWidget(
+        context: Context,
+        appWidgetManager: AppWidgetManager,
+        appWidgetId: Int,
+        caseInfo: CaseInfo
+    ) {
         val pendingIntent: PendingIntent = Intent(context, MainActivity::class.java)
-                .let { intent ->
-                    PendingIntent.getActivity(context, 0, intent, 0)
-                }
+            .let { intent ->
+                PendingIntent.getActivity(context, 0, intent, 0)
+            }
 
-        // Get the layout for the App Widget and attach an on-click listener
-        // to the button
         val views: RemoteViews = RemoteViews(
-                context.packageName,
-                R.layout.view_widget_template1
+            context.packageName,
+            R.layout.view_widget_template1
         ).apply {
             setOnClickPendingIntent(R.id.root, pendingIntent)
+            setTextViewText(R.id.textNewCase, caseInfo.newConfirmedDisplay)
+            setTextViewText(R.id.textDate, caseInfo.updatedDisplay)
+            setTextViewText(R.id.textDeath, caseInfo.newDeathsDisplay)
+            setTextViewText(R.id.textHeal, caseInfo.hospitalizedDisplay)
+            setTextViewText(R.id.textUpdateTimestamp, Date().display("dd/MM/YY hh:mm") ?: "")
+            setOnClickPendingIntent(R.id.buttonRefresh, getPendingSelfIntent(context, REFRESH_TAG));
+
+
+            setViewVisibility(
+                R.id.imageNewCase,
+                if (shouldShowCovid) View.VISIBLE else View.INVISIBLE
+            )
         }
 
-        views.setTextViewText(R.id.textNewCase, caseInfo.newConfirmedDisplay)
-        views.setTextViewText(R.id.textDate, caseInfo.updatedDisplay)
-        views.setTextViewText(R.id.textDeath, caseInfo.newDeathsDisplay)
-        views.setTextViewText(R.id.textHeal, caseInfo.hospitalizedDisplay)
-
-        views.setViewVisibility(R.id.imageNewCase, if(shouldShowCovid) View.VISIBLE else View.INVISIBLE)
-        // Tell the AppWidgetManager to perform an update on the current app widget
         appWidgetManager.updateAppWidget(appWidgetId, views)
+    }
+
+    protected fun getPendingSelfIntent(context: Context?, action: String?): PendingIntent? {
+        val intent = Intent(context, javaClass)
+        intent.action = action
+        return PendingIntent.getBroadcast(context, 0, intent, 0)
     }
 }

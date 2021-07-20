@@ -6,6 +6,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
 import androidx.core.view.drawToBitmap
@@ -41,6 +42,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun initView() {
         titleHeal.text = "เข้ารักษาใหม่"
+        containerUpdateDetail.isVisible = false
 
         swipeRefresh.setOnRefreshListener {
             viewModel.fetch()
@@ -101,6 +103,8 @@ class MainActivity : AppCompatActivity() {
     private fun shareBitmap(bitmap: Bitmap) {
         val cachePath = File(externalCacheDir, "th_cov/")
         cachePath.mkdirs()
+
+        Log.d("","")
 
         val file = File(cachePath, "capture.png")
         val fileOutputStream: FileOutputStream
