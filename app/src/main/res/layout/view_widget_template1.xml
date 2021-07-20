@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_rounded_corner"
+    android:padding="@dimen/space_2">
+
+    <LinearLayout
+        android:id="@+id/containerTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageNewCase"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_covid" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_1.5"
+            android:layout_weight="1"
+            android:text="ติดเชื้อเพิ่มวันนี้"
+            android:textAppearance="@style/TextAppearance.App.Subhead"
+            android:textColor="@color/text_default" />
+
+        <TextView
+            android:id="@+id/textDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_1.5"
+            android:text="19/07"
+            android:textAppearance="@style/TextAppearance.App.Body1.Number"
+            android:textColor="@color/text_default" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textNewCase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/containerTitle"
+        android:layout_marginStart="@dimen/space_4.5"
+        android:text="-"
+        tools:text="10,214"
+        android:textAppearance="@style/TextAppearance.App.Display2.Number"
+        android:textColor="@color/danger" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textNewCase"
+        android:layout_marginTop="@dimen/space_2"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_rounded_corner">
+
+
+            <ImageView
+                android:id="@+id/imageDeath"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_ghost" />
+
+            <TextView
+                android:id="@+id/titleDeath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_1.5"
+                android:layout_toEndOf="@id/imageDeath"
+                android:text="เสียชีวิตวันนี้"
+                android:textAppearance="@style/TextAppearance.App.Subhead"
+                android:textColor="@color/text_default" />
+
+            <TextView
+                android:id="@+id/textDeath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titleDeath"
+                android:layout_alignStart="@id/titleDeath"
+                android:text="-"
+                android:textAppearance="@style/TextAppearance.App.Display1.Number"
+                android:textColor="@color/accent"
+                tools:text="98" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_rounded_corner">
+
+            <ImageView
+                android:id="@+id/imageHeal"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_hospitalization" />
+
+            <TextView
+                android:id="@+id/titleHeal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_1.5"
+                android:layout_toEndOf="@id/imageHeal"
+                android:text="รักษาอยู่"
+                android:textAppearance="@style/TextAppearance.App.Subhead"
+                android:textColor="@color/text_default" />
+
+            <TextView
+                android:id="@+id/textHeal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titleHeal"
+                android:layout_alignStart="@id/titleHeal"
+                tools:text="116,135"
+                android:text="-"
+                android:textAppearance="@style/TextAppearance.App.Display1.Number"
+                android:textColor="@color/secondary" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

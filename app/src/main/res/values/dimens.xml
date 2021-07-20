@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="space_.25">2dp</dimen>
+    <dimen name="space_.5">4dp</dimen>
+    <dimen name="space_1">8dp</dimen>
+    <dimen name="space_1.5">12dp</dimen>
+    <dimen name="space_2">16dp</dimen>
+    <dimen name="space_2.5">20dp</dimen>
+    <dimen name="space_3">24dp</dimen>
+    <dimen name="space_4">32dp</dimen>
+    <dimen name="space_4.5">36dp</dimen>
+
+    <dimen name="radius_1.5">12dp</dimen>
+    <dimen name="radius_1">8dp</dimen>
+    <dimen name="radius_2">16dp</dimen>
+    <dimen name="radius_3">24dp</dimen>
+    <dimen name="radius_.75">6dp</dimen>
+    <dimen name="radius_.5">4dp</dimen>
+
+    <dimen name="material_text_overline">10sp</dimen>
+    <dimen name="material_text_button">14sp</dimen>
+    <dimen name="material_text_menu">14sp</dimen>
+    <dimen name="material_text_caption">12sp</dimen>
+    <dimen name="material_text_body1">14sp</dimen>
+    <dimen name="material_text_body2">13sp</dimen>
+    <dimen name="material_text_subhead">16sp</dimen>
+    <dimen name="material_text_subtitle">18sp</dimen>
+    <dimen name="material_text_title">20sp</dimen>
+    <dimen name="material_text_headline">24sp</dimen>
+    <dimen name="material_text_display1">32sp</dimen>
+    <dimen name="material_text_display2">45sp</dimen>
+    <dimen name="material_text_display3">56sp</dimen>
+    <dimen name="material_text_display4">112sp</dimen>
+
+    <dimen name="action_bar_size">48dp</dimen>
+    <dimen name="product_listing_horizontal_item_width">136dp</dimen>
+    <dimen name="more_banner_width">268dp</dimen>
+    <dimen name="hot_deal_item_width">108dp</dimen>
+    <dimen name="hot_key_item_width">48dp</dimen>
+</resources>

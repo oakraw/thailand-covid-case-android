@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- START xml_defaults -->
+<defaultsMap>
+    <entry>
+        <key>app_title</key>
+        <value>Today TH</value>
+    </entry>
+    <entry>
+        <key>show_covid</key>
+        <value>false</value>
+    </entry>
+</defaultsMap>
+    <!-- END xml_defaults -->

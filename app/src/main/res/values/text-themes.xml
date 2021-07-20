@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.App.Menu" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:fontFamily">@font/mitr_regular</item>
+    </style>
+
+    <style name="TextAppearance.App.Menu.Active" parent="TextAppearance.App.Menu">
+        <item name="android:fontFamily">@font/mitr_medium</item>
+    </style>
+
+
+    <style name="TextAppearance.App.Overline" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:fontFamily">@font/mitr_regular</item>
+        <item name="android:textSize">@dimen/material_text_overline</item>
+    </style>
+
+    <style name="TextAppearance.App.Overline.Bold" parent="TextAppearance.App.Overline">
+        <item name="android:fontFamily">@font/mitr_medium</item>
+    </style>
+
+    <style name="TextAppearance.App.Caption" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:fontFamily">@font/mitr_regular</item>
+        <item name="android:textSize">@dimen/material_text_caption</item>
+    </style>
+
+    <style name="TextAppearance.App.Caption.Bold" parent="TextAppearance.App.Caption">
+        <item name="android:fontFamily">@font/mitr_medium</item>
+    </style>
+
+    <style name="TextAppearance.App.Body1" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:fontFamily">@font/mitr_regular</item>
+        <item name="android:textSize">@dimen/material_text_body1</item>
+    </style>
+
+    <style name="TextAppearance.App.Body1.Number" parent="TextAppearance.App.Body1">
+        <item name="android:fontFamily">@font/rubik_regular</item>
+    </style>
+
+    <style name="TextAppearance.App.Body1.Bold" parent="TextAppearance.App.Body1">
+        <item name="android:fontFamily">@font/mitr_medium</item>
+    </style>
+
+    <style name="TextAppearance.App.Body2" parent="TextAppearance.AppCompat.Body2">
+        <item name="android:fontFamily">@font/mitr_regular</item>
+        <item name="android:textSize">@dimen/material_text_body2</item>
+    </style>
+
+    <style name="TextAppearance.App.Body2.Bold" parent="TextAppearance.App.Body2">
+        <item name="android:fontFamily">@font/mitr_medium</item>
+    </style>
+
+    <style name="TextAppearance.App.Button" parent="TextAppearance.AppCompat.Button">
+        <item name="android:fontFamily">@font/mitr_regular</item>
+    </style>
+
+    <style name="TextAppearance.App.Subhead" parent="TextAppearance.AppCompat.Subhead">
+        <item name="android:fontFamily">@font/mitr_regular</item>
+        <item name="android:textSize">@dimen/material_text_subhead</item>
+    </style>
+
+    <style name="TextAppearance.App.Subhead.Bold" parent="TextAppearance.App.Subhead">
+        <item name="android:fontFamily">@font/mitr_medium</item>
+    </style>
+
+    <style name="TextAppearance.App.Subtitle" parent="TextAppearance.AppCompat.Title">
+        <item name="android:fontFamily">@font/mitr_regular</item>
+        <item name="android:textSize">@dimen/material_text_subtitle</item>
+    </style>
+
+    <style name="TextAppearance.App.Subtitle.Bold" parent="TextAppearance.App.Subtitle">
+        <item name="android:fontFamily">@font/mitr_medium</item>
+    </style>
+
+    <style name="TextAppearance.App.Title" parent="TextAppearance.AppCompat.Title">
+        <item name="android:fontFamily">@font/mitr_regular</item>
+        <item name="android:textSize">@dimen/material_text_title</item>
+    </style>
+
+    <style name="TextAppearance.App.Title.Bold" parent="TextAppearance.App.Title">
+        <item name="android:fontFamily">@font/mitr_medium</item>
+    </style>
+
+    <style name="TextAppearance.App.Headline" parent="TextAppearance.AppCompat.Headline">
+        <item name="android:fontFamily">@font/mitr_regular</item>
+        <item name="android:textSize">@dimen/material_text_headline</item>
+    </style>
+
+    <style name="TextAppearance.App.Headline.Bold" parent="TextAppearance.App.Headline">
+        <item name="android:fontFamily">@font/mitr_medium</item>
+    </style>
+
+    <style name="TextAppearance.App.Display1" parent="TextAppearance.AppCompat.Display1">
+        <item name="android:fontFamily">@font/mitr_regular</item>
+        <item name="android:textSize">@dimen/material_text_display1</item>
+    </style>
+
+
+    <style name="TextAppearance.App.Display1.Number" parent="TextAppearance.AppCompat.Display1">
+        <item name="android:fontFamily">@font/rubik_regular</item>
+        <item name="android:textSize">@dimen/material_text_display1</item>
+    </style>
+
+
+    <style name="TextAppearance.App.Display2" parent="TextAppearance.AppCompat.Display2">
+        <item name="android:fontFamily">@font/mitr_regular</item>
+        <item name="android:textSize">@dimen/material_text_display2</item>
+    </style>
+
+    <style name="TextAppearance.App.Display2.Number" parent="TextAppearance.AppCompat.Display2">
+        <item name="android:fontFamily">@font/rubik_regular</item>
+        <item name="android:textSize">@dimen/material_text_display2</item>
+    </style>
+
+    <style name="TextAppearance.App.Display3" parent="TextAppearance.AppCompat.Display3">
+        <item name="android:fontFamily">@font/mitr_regular</item>
+        <item name="android:textSize">@dimen/material_text_display3</item>
+    </style>
+
+    <style name="TextAppearance.App.Display4" parent="TextAppearance.AppCompat.Display4">
+        <item name="android:fontFamily">@font/mitr_regular</item>
+        <item name="android:textSize">@dimen/material_text_display4</item>
+    </style>
+
+
+
+
+</resources>
