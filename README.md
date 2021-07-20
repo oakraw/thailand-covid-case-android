@@ -2,7 +2,7 @@
 โปรเจคนี้ตั้งใจทำขึ้นมาเพื่อให้คนไทยได้สามารถเข้าถึงตัวเลขยอดติดเชื้อโควิดของประเทศไทยได้ง่ายๆ ผ่าน Android Widget ทางผู้พัฒนาไม่ได้มีจุดประสงค์แสวงหาผลประโยชน์ใดๆ เพียงเพื่อต้องการให้เป็นเครื่องมือช่วยให้คนไทยได้ตระหนักรู้และคอยเฝ้าระวังตัวเองมากยิ่งขึ้น
 
 # ดาวน์โหลด
-[ดาวน์โหลดไฟล์ apk](https://github.com/oakraw/thailand-covid-case-android/blob/master/app/release/app-release.apk?raw=true)
+[ดาวน์โหลดไฟล์ apk](https://github.com/oakraw/thailand-covid-case-android/releases/download/v1.2/app-release.apk)
 
 # Screenshot
 ![Image](https://github.com/oakraw/thailand-covid-case-android/blob/master/ss.jpg?raw=true)
