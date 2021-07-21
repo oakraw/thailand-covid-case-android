@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/shape_rounded_corner.xml" value="0.2520833333333333" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.21197916666666666" />
+        <entry key="app/src/main/res/layout/view_info_snippet.xml" value="0.2359375" />
+        <entry key="app/src/main/res/layout/view_widget_template1.xml" value="1.5" />
+        <entry key="app/src/main/res/xml/main_appwidget_info.xml" value="0.3491847826086957" />
+        <entry key="app/src/main/res/xml/provider_paths.xml" value="0.2359375" />
+        <entry key="app/src/main/res/xml/remote_config_defaults.xml" value="0.3491847826086957" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
