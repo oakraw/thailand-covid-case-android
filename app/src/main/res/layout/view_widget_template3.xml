@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_rounded_corner"
+    android:paddingTop="@dimen/space_2"
+    android:paddingStart="@dimen/space_2"
+    android:paddingEnd="@dimen/space_2"
+    android:paddingBottom="@dimen/space_1.5">
+
+    <LinearLayout
+        android:id="@+id/containerTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageNewCase"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_covid" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_1.5"
+            android:layout_weight="1"
+            android:text="ติดเชื้อเพิ่มวันนี้"
+            android:textAppearance="@style/TextAppearance.App.Subhead"
+            android:textColor="@color/text_default" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textNewCase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/containerTitle"
+        android:text="-"
+        android:gravity="end"
+        android:textAppearance="@style/TextAppearance.App.Display2.Number"
+        android:textColor="@color/danger"
+        tools:text="10,214" />
+
+    <LinearLayout
+        android:id="@+id/containerUpdateDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/space_1"
+        android:gravity="center_vertical|end"
+        android:layout_below="@id/textNewCase">
+
+        <TextView
+            android:id="@+id/textUpdateTimestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:layout_marginStart="@dimen/space_1"
+            android:textAppearance="@style/TextAppearance.App.Caption.Number"
+            android:textColor="@color/text_hint"/>
+
+        <ImageView
+            android:id="@+id/buttonRefresh"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:clickable="true"
+            android:layout_marginStart="@dimen/space_1"
+            android:src="@drawable/ic_refresh"/>
+
+    </LinearLayout>
+</RelativeLayout>

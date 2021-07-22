@@ -97,7 +97,7 @@ class MainActivity : AppCompatActivity() {
             imageTotalCase.isInvisible = !this
             imageNewCase.isInvisible = !this
         }
-        textHeader.text = remoteConfig.getString("app_title")
+        textHeader.text = remoteConfig.getString("app_headline")
     }
 
     private fun shareBitmap(bitmap: Bitmap) {

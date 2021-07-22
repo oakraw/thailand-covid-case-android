@@ -30,14 +30,8 @@
     <dimen name="material_text_subtitle">18sp</dimen>
     <dimen name="material_text_title">20sp</dimen>
     <dimen name="material_text_headline">24sp</dimen>
-    <dimen name="material_text_display1">32sp</dimen>
-    <dimen name="material_text_display2">45sp</dimen>
-    <dimen name="material_text_display3">56sp</dimen>
+    <dimen name="material_text_display1">28sp</dimen>
+    <dimen name="material_text_display2">40sp</dimen>
+    <dimen name="material_text_display3">48sp</dimen>
     <dimen name="material_text_display4">112sp</dimen>
-
-    <dimen name="action_bar_size">48dp</dimen>
-    <dimen name="product_listing_horizontal_item_width">136dp</dimen>
-    <dimen name="more_banner_width">268dp</dimen>
-    <dimen name="hot_deal_item_width">108dp</dimen>
-    <dimen name="hot_key_item_width">48dp</dimen>
 </resources>

@@ -6,6 +6,10 @@
         <value>Today TH</value>
     </entry>
     <entry>
+        <key>app_headline</key>
+        <value>Today TH</value>
+    </entry>
+    <entry>
         <key>show_covid</key>
         <value>false</value>
     </entry>
