@@ -7,7 +7,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/shape_rounded_corner"
-    android:padding="@dimen/space_2">
+    android:paddingTop="@dimen/space_2"
+    android:paddingStart="@dimen/space_2"
+    android:paddingEnd="@dimen/space_2"
+    android:paddingBottom="@dimen/space_1.5">
 
     <LinearLayout
         android:id="@+id/containerTitle"
@@ -48,9 +51,9 @@
         android:layout_below="@id/containerTitle"
         android:layout_marginStart="@dimen/space_4.5"
         android:text="-"
-        tools:text="10,214"
         android:textAppearance="@style/TextAppearance.App.Display2.Number"
-        android:textColor="@color/danger" />
+        android:textColor="@color/danger"
+        tools:text="10,214" />
 
     <LinearLayout
         android:id="@+id/containerSecondaryInfo"
@@ -123,10 +126,13 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/titleHeal"
                 android:layout_alignStart="@id/titleHeal"
-                tools:text="116,135"
+                android:maxLines="1"
                 android:text="-"
                 android:textAppearance="@style/TextAppearance.App.Display1.Number"
-                android:textColor="@color/secondary" />
+                android:textColor="@color/secondary"
+                app:autoSizeMaxTextSize="@dimen/material_text_display1"
+                app:autoSizeTextType="uniform"
+                tools:text="116,135" />
         </RelativeLayout>
 
     </LinearLayout>

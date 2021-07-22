@@ -31,13 +31,21 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <receiver android:name=".service.MainAppWidgetProvider" >
+        <receiver android:name=".service.AppWidgetTemplate1Provider" android:label="Large">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
             <meta-data android:name="android.appwidget.provider"
-                android:resource="@xml/main_appwidget_info" />
+                android:resource="@xml/template1_appwidget_info" />
         </receiver>
+        <receiver android:name=".service.AppWidgetTemplate3Provider" android:label="small">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@xml/template3_appwidget_info" />
+        </receiver>
+
     </application>
 
 </manifest>
