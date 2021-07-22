@@ -4,9 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/shape_rounded_corner.xml" value="0.2520833333333333" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.21197916666666666" />
+        <entry key="app/src/main/res/layout-v26/view_widget_template1.xml" value="0.3686594202898551" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1546700942587832" />
         <entry key="app/src/main/res/layout/view_info_snippet.xml" value="0.2359375" />
-        <entry key="app/src/main/res/layout/view_widget_template1.xml" value="1.5" />
+        <entry key="app/src/main/res/layout/view_widget_template1.xml" value="0.23502604166666666" />
+        <entry key="app/src/main/res/layout/view_widget_template3.xml" value="0.3686594202898551" />
         <entry key="app/src/main/res/xml/main_appwidget_info.xml" value="0.3491847826086957" />
         <entry key="app/src/main/res/xml/provider_paths.xml" value="0.2359375" />
         <entry key="app/src/main/res/xml/remote_config_defaults.xml" value="0.3491847826086957" />
