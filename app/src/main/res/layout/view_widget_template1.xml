@@ -74,7 +74,7 @@
                 android:id="@+id/imageDeath"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_ghost" />
+                android:src="@drawable/ic_flower" />
 
             <TextView
                 android:id="@+id/titleDeath"

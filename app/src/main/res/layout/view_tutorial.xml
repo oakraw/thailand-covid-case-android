@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/overlay"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="@dimen/space_2">
+
+
+        <TextView
+            android:id="@+id/textHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.App.Title"
+            android:visibility="invisible"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/layoutShouldBeClicked"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_3"
+            app:cardCornerRadius="@dimen/radius_3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+                <include layout="@layout/view_widget_template1" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:padding="@dimen/space_2"
+            android:layout_marginTop="@dimen/space_1.5"
+            android:textAppearance="@style/TextAppearance.App.Subhead"
+            android:background="@drawable/shape_rounded_corner"
+            android:backgroundTint="#AB000000"
+            android:text="แตะที่การ์ดเพื่อแชร์" />
+
+    </LinearLayout>
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/custom_text"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        android:gravity="center"-->
+<!--        android:text="this is a custom text"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textColor="@android:color/white"-->
+<!--        android:textSize="24dp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

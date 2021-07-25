@@ -34,20 +34,21 @@ abstract class BaseAppWidgetProvider : AppWidgetProvider(), KoinComponent {
     private val apiRepository: ApiRepository by inject()
     private val REFRESH_TAG = "REFRESH_TAG"
     abstract var layoutId: Int
+    abstract var providerClass: Class<*>
 
     override fun onReceive(context: Context, intent: Intent) {
         super.onReceive(context, intent)
         if (intent.action == REFRESH_TAG) {
             Toast.makeText(context, "Updating...", Toast.LENGTH_SHORT).show();
 
-            val updateIntent = Intent(context, BaseAppWidgetProvider::class.java)
+            val updateIntent = Intent(context, providerClass)
             updateIntent.action = AppWidgetManager.ACTION_APPWIDGET_UPDATE
 
             val ids = AppWidgetManager.getInstance(context)
                 .getAppWidgetIds(
                     ComponentName(
                         context,
-                        BaseAppWidgetProvider::class.java
+                        providerClass
                     )
                 )
 
@@ -125,4 +126,5 @@ abstract class BaseAppWidgetProvider : AppWidgetProvider(), KoinComponent {
         intent.action = action
         return PendingIntent.getBroadcast(context, 0, intent, 0)
     }
+
 }

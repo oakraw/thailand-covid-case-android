@@ -12,213 +12,223 @@
         android:layout_height="wrap_content"
         android:fillViewport="true">
 
-        <LinearLayout
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:id="@+id/layoutCapture"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/primary"
-                android:orientation="vertical"
-                android:padding="@dimen/space_2">
-
-
-                <TextView
-                    android:id="@+id/textHeader"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Today TH"
-                    android:textAppearance="@style/TextAppearance.App.Title"
-                    android:textColor="@color/text_white" />
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/space_3"
-                    app:cardCornerRadius="@dimen/radius_3"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <FrameLayout
-                        android:id="@+id/layoutShare"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:clickable="true"
-                        android:foreground="?selectableItemBackground">
-
-                        <include layout="@layout/view_widget_template1" />
-
-                    </FrameLayout>
-                </androidx.cardview.widget.CardView>
-
-                <TextView
-                    android:id="@+id/textCaptureCredit"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/space_1"
-                    android:gravity="center"
-                    android:text="แชร์จาก แอพกี่คนแล้ว"
-                    android:textAppearance="@style/TextAppearance.App.Body1"
-                    android:textColor="@color/text_white"
-                    android:visibility="gone" />
-
-            </LinearLayout>
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
+                android:orientation="vertical">
 
-                android:paddingStart="@dimen/space_2"
-                android:paddingEnd="@dimen/space_2"
-                android:paddingBottom="@dimen/space_2">
+                <LinearLayout
+                    android:id="@+id/layoutCapture"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/primary"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_2">
 
-                <androidx.cardview.widget.CardView
+
+                    <TextView
+                        android:id="@+id/textHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Today TH"
+                        android:textAppearance="@style/TextAppearance.App.Title"
+                        android:textColor="@color/text_white" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_3"
+                        app:cardCornerRadius="@dimen/radius_3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <FrameLayout
+                            android:id="@+id/layoutShare"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:foreground="?selectableItemBackground">
+
+                            <include layout="@layout/view_widget_template1" />
+
+                        </FrameLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/textCaptureCredit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_1"
+                        android:gravity="center"
+                        android:text="แชร์จาก แอพกี่คนแล้ว"
+                        android:textAppearance="@style/TextAppearance.App.Body1"
+                        android:textColor="@color/text_white"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="@dimen/space_1"
-                    android:layout_weight="1"
-                    app:cardCornerRadius="@dimen/radius_3"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    android:orientation="vertical"
 
-                    <LinearLayout
+                    android:paddingStart="@dimen/space_2"
+                    android:paddingEnd="@dimen/space_2"
+                    android:paddingBottom="@dimen/space_2">
+
+                    <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:padding="@dimen/space_2">
+                        android:layout_marginTop="@dimen/space_1"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="@dimen/radius_3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
 
-                        <RelativeLayout
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/shape_rounded_corner">
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="@dimen/space_2">
 
-                            <ImageView
-                                android:id="@+id/imageTotalCase"
-                                android:layout_width="24dp"
-                                android:layout_height="24dp"
-                                android:src="@drawable/ic_covid" />
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/shape_rounded_corner">
+
+                                <ImageView
+                                    android:id="@+id/imageTotalCase"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/ic_covid" />
+
+                                <TextView
+                                    android:id="@+id/titleTotalCase"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/space_1.5"
+                                    android:layout_toEndOf="@id/imageTotalCase"
+                                    android:text="ติดเชื้อทั้งหมด"
+                                    android:textAppearance="@style/TextAppearance.App.Subhead"
+                                    android:textColor="@color/text_default" />
+
+                                <TextView
+                                    android:id="@+id/textTotalCase"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/titleTotalCase"
+                                    android:layout_alignStart="@id/titleTotalCase"
+                                    android:text="-"
+                                    android:textAppearance="@style/TextAppearance.App.Display1.Number"
+                                    android:textColor="@color/text_black"
+                                    android:textSize="36sp" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/space_1"
+                                android:background="@drawable/shape_rounded_corner">
+
+                                <ImageView
+                                    android:id="@+id/imageHospitalized"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/ic_hospitalization" />
+
+                                <TextView
+                                    android:id="@+id/titleActiveHospitalized"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/space_1.5"
+                                    android:layout_toEndOf="@id/imageHospitalized"
+                                    android:text="รักษาอยู่"
+                                    android:textAppearance="@style/TextAppearance.App.Subhead"
+                                    android:textColor="@color/text_default" />
+
+                                <TextView
+                                    android:id="@+id/textActiveHospitalized"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/titleActiveHospitalized"
+                                    android:layout_alignStart="@id/titleActiveHospitalized"
+                                    android:text="-"
+                                    android:textAppearance="@style/TextAppearance.App.Display1.Number"
+                                    android:textColor="@color/text_black" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/space_1"
+                                android:background="@drawable/shape_rounded_corner">
+
+                                <ImageView
+                                    android:id="@+id/imageTotalDeath"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/ic_flower" />
+
+                                <TextView
+                                    android:id="@+id/titleTotalDeath"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/space_1.5"
+                                    android:layout_toEndOf="@id/imageTotalDeath"
+                                    android:text="สูญเสียรวม"
+                                    android:textAppearance="@style/TextAppearance.App.Subhead"
+                                    android:textColor="@color/text_default" />
+
+                                <TextView
+                                    android:id="@+id/textTotalDeath"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/titleTotalDeath"
+                                    android:layout_alignStart="@id/titleTotalDeath"
+                                    android:text="-"
+                                    android:textAppearance="@style/TextAppearance.App.Display1.Number"
+                                    android:textColor="@color/text_black" />
+                            </RelativeLayout>
+
+                            <Space
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1" />
 
                             <TextView
-                                android:id="@+id/titleTotalCase"
-                                android:layout_width="wrap_content"
+                                android:id="@+id/textCredit"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/space_1.5"
-                                android:layout_toEndOf="@id/imageTotalCase"
-                                android:text="ติดเชื้อทั้งหมด"
-                                android:textAppearance="@style/TextAppearance.App.Subhead"
+                                android:gravity="center"
+                                android:text="ข้อมูลจาก -"
+                                android:textAppearance="@style/TextAppearance.App.Body1"
                                 android:textColor="@color/text_default" />
 
                             <TextView
-                                android:id="@+id/textTotalCase"
-                                android:layout_width="wrap_content"
+                                android:id="@+id/textLastUpdated"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_below="@id/titleTotalCase"
-                                android:layout_alignStart="@id/titleTotalCase"
-                                android:text="-"
-                                android:textAppearance="@style/TextAppearance.App.Display1.Number"
-                                android:textColor="@color/text_black"
-                                android:textSize="36sp" />
-                        </RelativeLayout>
-
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/space_1"
-                            android:background="@drawable/shape_rounded_corner">
-
-                            <ImageView
-                                android:id="@+id/imageHospitalized"
-                                android:layout_width="24dp"
-                                android:layout_height="24dp"
-                                android:src="@drawable/ic_hospitalization" />
-
-                            <TextView
-                                android:id="@+id/titleActiveHospitalized"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/space_1.5"
-                                android:layout_toEndOf="@id/imageHospitalized"
-                                android:text="รักษาอยู่"
-                                android:textAppearance="@style/TextAppearance.App.Subhead"
+                                android:gravity="center"
+                                android:text="อัพเดตล่าสุดเมื่อ -"
+                                android:textAppearance="@style/TextAppearance.App.Body1"
                                 android:textColor="@color/text_default" />
 
-                            <TextView
-                                android:id="@+id/textActiveHospitalized"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@id/titleActiveHospitalized"
-                                android:layout_alignStart="@id/titleActiveHospitalized"
-                                android:text="-"
-                                android:textAppearance="@style/TextAppearance.App.Display1.Number"
-                                android:textColor="@color/text_black" />
-                        </RelativeLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
 
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/space_1"
-                            android:background="@drawable/shape_rounded_corner">
-
-                            <ImageView
-                                android:id="@+id/imageTotalDeath"
-                                android:layout_width="24dp"
-                                android:layout_height="24dp"
-                                android:src="@drawable/ic_ghost" />
-
-                            <TextView
-                                android:id="@+id/titleTotalDeath"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/space_1.5"
-                                android:layout_toEndOf="@id/imageTotalDeath"
-                                android:text="เสียชีวิตรวม"
-                                android:textAppearance="@style/TextAppearance.App.Subhead"
-                                android:textColor="@color/text_default" />
-
-                            <TextView
-                                android:id="@+id/textTotalDeath"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@id/titleTotalDeath"
-                                android:layout_alignStart="@id/titleTotalDeath"
-                                android:text="-"
-                                android:textAppearance="@style/TextAppearance.App.Display1.Number"
-                                android:textColor="@color/text_black" />
-                        </RelativeLayout>
-
-                        <Space
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="1" />
-
-                        <TextView
-                            android:id="@+id/textCredit"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="ข้อมูลจาก -"
-                            android:textAppearance="@style/TextAppearance.App.Body1"
-                            android:textColor="@color/text_default" />
-
-                        <TextView
-                            android:id="@+id/textLastUpdated"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="อัพเดตล่าสุดเมื่อ -"
-                            android:textAppearance="@style/TextAppearance.App.Body1"
-                            android:textColor="@color/text_default" />
-
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/containerTutorial"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
     </androidx.core.widget.NestedScrollView>
 
 </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
